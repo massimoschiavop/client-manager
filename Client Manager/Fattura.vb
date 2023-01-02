@@ -373,7 +373,7 @@ Public Class Fattura
                     .Filter = "File Excel|*.xls"
                     .FilterIndex = 1
                     .InitialDirectory = fattureFolder
-                    If .ShowDialog = Windows.Forms.DialogResult.OK Then
+                    If .ShowDialog = System.Windows.Forms.DialogResult.OK Then
                         ExWb2.SaveAs(SFD.FileName)
                     End If
                 End With

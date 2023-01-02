@@ -460,7 +460,7 @@ Public Class DatiAccettazione
                     .Filter = "File Excel|*.xls"
                     .FilterIndex = 1
                     .InitialDirectory = preventiviFolder
-                    If .ShowDialog = Windows.Forms.DialogResult.OK Then
+                    If .ShowDialog = System.Windows.Forms.DialogResult.OK Then
                         ExWb.SaveAs(SFD.FileName)
                     End If
                 End With

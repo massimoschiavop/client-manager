@@ -33,7 +33,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A177A53C339E4A09AD544F1377085723"
+        "MsmKey" = "8:_D153664F87384FD18A49AF524CF37C3F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -67,6 +67,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -83,6 +99,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -120,13 +152,13 @@
             "TargetName" = "8:ElencoClienti.mdb"
             "Tag" = "8:"
             "Folder" = "8:_9159BDDC50324E84A82EDDCD0EBF7275"
-            "Condition" = "8:"
+            "Condition" = "8:not DBELENCOCLIENTEXISTS"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
             "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
+            "Permanent" = "11:TRUE"
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
@@ -200,13 +232,13 @@
             "TargetName" = "8:Magazzino.mdb"
             "Tag" = "8:"
             "Folder" = "8:_9159BDDC50324E84A82EDDCD0EBF7275"
-            "Condition" = "8:"
+            "Condition" = "8:not DBMAGAZZINO"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
             "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
+            "Permanent" = "11:TRUE"
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
@@ -304,6 +336,36 @@
         }
         "Locator"
         {
+            "{39E1837C-0DB9-45A2-89C8-438377A77565}:_1BF8E357454E41A4B5325860CA066664"
+            {
+            "Name" = "8:dbMagazzinoExists"
+            "Folder" = "8:[AppDataFolder]\\Client Manager\\Database"
+            "Depth" = "2:0"
+            "FileName" = "8:Magazzino.mdb"
+            "MinVesion" = "8:"
+            "MaxVersion" = "8:"
+            "MinSize" = "8:"
+            "MaxSize" = "8:"
+            "MinDate" = "8:"
+            "MaxDate" = "8:"
+            "Languages" = "8:"
+            "Property" = "8:DBMAGAZZINO"
+            }
+            "{39E1837C-0DB9-45A2-89C8-438377A77565}:_D79E0E9814B647A3A934F017FE1F62F0"
+            {
+            "Name" = "8:dbElencoClientiExists"
+            "Folder" = "8:[AppDataFolder]\\Client Manager\\Database"
+            "Depth" = "2:0"
+            "FileName" = "8:ElencoClienti.mdb"
+            "MinVesion" = "8:"
+            "MaxVersion" = "8:"
+            "MinSize" = "8:"
+            "MaxSize" = "8:"
+            "MinDate" = "8:"
+            "MaxDate" = "8:"
+            "Languages" = "8:"
+            "Property" = "8:DBELENCOCLIENTEXISTS"
+            }
         }
         "MsiBootstrapper"
         {
@@ -314,8 +376,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Client Manager"
-        "ProductCode" = "8:{023BF881-7BE8-46C5-A21B-6366AF895CC2}"
-        "PackageCode" = "8:{E9936961-1E80-40BA-BBF8-6D72AEBF58E0}"
+        "ProductCode" = "8:{604256B0-DF0C-47F1-9113-ECCF36A38C0E}"
+        "PackageCode" = "8:{332A68F3-EC20-4733-8F56-277428678BD4}"
         "UpgradeCode" = "8:{0CDADBF5-105F-4C5A-97C8-A92CEAEE482B}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -834,9 +896,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A177A53C339E4A09AD544F1377085723"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D153664F87384FD18A49AF524CF37C3F"
             {
-            "SourcePath" = "8:..\\Client Manager\\obj\\Debug\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\Client Manager\\obj\\Release\\net6.0-windows10.0.22621.0\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_802AEF3D4113483A948BCBFA12AE1F45"

@@ -26,7 +26,7 @@ Public Class DatiAccettazione
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim valoreScheda As String
+        Dim valoreScheda As Integer = 1
 
         'disattiva filtro e imposta la data di oggi nella casella data in
         txtDataIn.Text = Date.Today
@@ -117,7 +117,9 @@ Public Class DatiAccettazione
         dgv1.DataSource = bdsTabella
 
         ' valorizzo campi numero scheda e matricola con quelli letti dal file
-        valoreScheda = (From T In dgv1.Rows.Cast(Of DataGridViewRow)() Select CInt(T.Cells("RipN").Value)).Max + 1
+        If (dgv1.RowCount >= 1) Then
+            valoreScheda = (From T In dgv1.Rows.Cast(Of DataGridViewRow)() Select CInt(T.Cells("RipN").Value)).Max + 1
+        End If
         Me.txtRipN.Text = valoreScheda
         Me.txtMatricola.Text = valoreScheda
 
@@ -184,7 +186,7 @@ Public Class DatiAccettazione
     End Sub
 
     Private Sub Pulisci()
-        Dim valoreScheda As String
+        Dim valoreScheda As Integer = 1
 
         'metto data oggi
         Me.txtDataIn.Text = Date.Today
@@ -212,7 +214,9 @@ Public Class DatiAccettazione
         Me.txtPTot.Text = ""
 
         ' valorizzo campi numero scheda e matricola con quelli letti dal file
-        valoreScheda = (From T In dgv1.Rows.Cast(Of DataGridViewRow)() Select CInt(T.Cells("RipN").Value)).Max + 1
+        If (dgv1.RowCount >= 1) Then
+            valoreScheda = (From T In dgv1.Rows.Cast(Of DataGridViewRow)() Select CInt(T.Cells("RipN").Value)).Max + 1
+        End If
         Me.txtRipN.Text = valoreScheda
         Me.txtMatricola.Text = valoreScheda
     End Sub

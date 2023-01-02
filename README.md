@@ -1,7 +1,7 @@
 ## Client Manager
 Scarica l'ultima versione:
-- [Installer MSI - Client Manager 1.0.0](https://github.com/massimoschiavop/client-manager/blob/master/Installer/version-1.0.0/client-manager-1.0.0-setup.msi)
-- [Installer EXE - Client Manager 1.0.0](https://github.com/massimoschiavop/client-manager/blob/master/Installer/version-1.0.0/client-manager-1.0.0-setup.exe)
+- [Installer MSI - Client Manager 1.0.0](https://github.com/massimoschiavop/client-manager/raw/master/Installer/version-1.0.0/client-manager-1.0.0-setup.msi)
+- [Installer EXE - Client Manager 1.0.0](https://github.com/massimoschiavop/client-manager/raw/master/Installer/version-1.0.0/client-manager-1.0.0-setup.exe)
 
 ## Installazione / Aggiornamento
 1. Backup dei file "ElencoClienti.mdb" e "Magazzino.mdb" presenti sotto la cartella nascosta: "C:\Users\<utente>\AppData\Roaming\Client Manager\Database"
